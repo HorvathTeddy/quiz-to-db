@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <p>
+            Teddy Horvath
+            CS328 HW 5-2 
+            04.28.2022
+        </p>
+    </header>
+    <h1>Triva Quiz</h1>
+    <p>Who is the current president?</p>
+    <input type="radio" name="q1" id="1" value="correct">
+    <label for="1">Joe Biden</label><br>
+    <input type="radio" name="q1" id="2">
+    <label for="1">Barack Obama</label><br>
+    <input type="radio" name="q1" id="3">
+    <label for="1">Donald Trump</label><br>
+
+    <p>What is the tallest building in the world?</p>
+    <input type="radio" name="q2" id="4">
+    <label for="4">Empire State Building</label><br>
+    <input type="radio" name="q2" id="5">
+    <label for="4">Shanghai Tower</label><br>
+    <input type="radio" name="q2" id="6" value="correct">
+    <label for="4">Burj Khalifa</label><br>
+
+    <p>An Olympic sized swimming pool is <input type="text" name="q3" id="7" value=""> in meters.</p>
+
+    <p>Cynophobia is a fear of dogs.</p>
+    <input type="radio" name="q4" id="8" value="correct">
+    <label for="8">True</label>
+    <input type="radio" name="q4" id="9">
+    <label for="9">False</label>
+
+    <p>Hexagons are generally used for stop signs.</p>
+    <input type="radio" name="q5" id="10">
+    <label for="8">True</label>
+    <input type="radio" name="q5" id="11" value="correct">
+    <label for="9">False</label><br>
+
+    <input type="submit" name="submit" id="submit" value="submit-quiz" onclick="
+        result()">
+    <script>
+        function result()
+        {
+            var score = 0;
+            if (document.getElementById('1').checked)
+            {
+                score++;
+            }
+            if (document.getElementById('6').checked)
+            {
+                score++;
+            }
+            pool = document.getElementById('7').value
+            if (pool = "50")
+            {
+                score++;
+            }
+            if (document.getElementById('8').checked)
+            {
+                score++;
+            }
+            if (document.getElementById('11').checked)
+            {
+                score++;
+            }
+            
+            document.addEventListener('DOMContentLoaded', ()=>
+            {
+                document.getElementById('submit').addEventListener('click', result)
+            })
+            return score;
+
+        }
+    </script>
+    <footer>
+        Theodore Horvath
+    </footer>
+</body>
+</html>
