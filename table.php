@@ -21,10 +21,10 @@ if (!$connect) {
 
 // Drop table if exists
 $quiz_table = "
-drop table quiz
+    drop table grade
 ";
 
-$quiz_table_query = oci_parse($conn, $quiz_table);
+$quiz_table_query = oci_parse($connect, $quiz_table);
 
 oci_execute($quiz_table_query, OCI_COMMIT_ON_SUCCESS);
 
@@ -45,7 +45,7 @@ $quiz_table = "
     )
 ";
 
-$quiz_table_query = oci_parse($conn, $quiz_table);
+$quiz_table_query = oci_parse($connect, $quiz_table);
 
 oci_execute($quiz_table_query, OCI_COMMIT_ON_SUCCESS);
 
@@ -53,7 +53,7 @@ oci_free_statement($quiz_table_query);
 
 echo 'Table Created | Cleared';
 
-oci_close($conn);
+oci_close($connect);
 
 
 ?>
