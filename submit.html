@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <header>
+        Teddy Horvath
+    </header>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="p_2.html">
+        function result()
+        {
+            var score = 0;
+            if (document.getElementById('1').checked)
+            {
+                score++;
+            }
+            if (document.getElementById('6').checked)
+            {
+                score++;
+            }
+            pool = document.getElementById('7').value
+            if (pool = "50")
+            {
+                score++;
+            }
+            if (document.getElementById('8').checked)
+            {
+                score++;
+            }
+            if (document.getElementById('11').checked)
+            {
+                score++;
+            }
+            
+            document.addEventListener('DOMContentLoaded', ()=>
+            {
+                document.getElementById('submit').addEventListener('click', result)
+            })
+            return score;
+
+        }
+        score = document.getElementById("demo").innerHTML
+    </script>
+    
+    <p id="demo"></p>
+</body>
+</html>

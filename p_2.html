@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <p id="msg"></p>
     <header>
         <p>
             Teddy Horvath
@@ -14,39 +16,41 @@
             04.28.2022
         </p>
     </header>
-    <h1>Triva Quiz</h1>
-    <p>Who is the current president?</p>
-    <input type="radio" name="q1" id="1" value="correct">
-    <label for="1">Joe Biden</label><br>
-    <input type="radio" name="q1" id="2">
-    <label for="1">Barack Obama</label><br>
-    <input type="radio" name="q1" id="3">
-    <label for="1">Donald Trump</label><br>
+    <form>
+        
+        <h1>Triva Quiz</h1>
+        <p>Who is the current president?</p>
+        <input type="radio" name="q1" id="1" value="correct">
+        <label for="1">Joe Biden</label><br>
+        <input type="radio" name="q1" id="2">
+        <label for="1">Barack Obama</label><br>
+        <input type="radio" name="q1" id="3">
+        <label for="1">Donald Trump</label><br>
 
-    <p>What is the tallest building in the world?</p>
-    <input type="radio" name="q2" id="4">
-    <label for="4">Empire State Building</label><br>
-    <input type="radio" name="q2" id="5">
-    <label for="4">Shanghai Tower</label><br>
-    <input type="radio" name="q2" id="6" value="correct">
-    <label for="4">Burj Khalifa</label><br>
+        <p>What is the tallest building in the world?</p>
+        <input type="radio" name="q2" id="4">
+        <label for="4">Empire State Building</label><br>
+        <input type="radio" name="q2" id="5">
+        <label for="4">Shanghai Tower</label><br>
+        <input type="radio" name="q2" id="6" value="correct">
+        <label for="4">Burj Khalifa</label><br>
 
-    <p>An Olympic sized swimming pool is <input type="text" name="q3" id="7" value=""> in meters.</p>
+        <p>An Olympic sized swimming pool is <input type="text" name="q3" id="7" value=""> in meters.</p>
 
-    <p>Cynophobia is a fear of dogs.</p>
-    <input type="radio" name="q4" id="8" value="correct">
-    <label for="8">True</label>
-    <input type="radio" name="q4" id="9">
-    <label for="9">False</label>
+        <p>Cynophobia is a fear of dogs.</p>
+        <input type="radio" name="q4" id="8" value="correct">
+        <label for="8">True</label>
+        <input type="radio" name="q4" id="9">
+        <label for="9">False</label>
 
-    <p>Hexagons are generally used for stop signs.</p>
-    <input type="radio" name="q5" id="10">
-    <label for="8">True</label>
-    <input type="radio" name="q5" id="11" value="correct">
-    <label for="9">False</label><br>
+        <p>Hexagons are generally used for stop signs.</p>
+        <input type="radio" name="q5" id="10">
+        <label for="8">True</label>
+        <input type="radio" name="q5" id="11" value="correct">
+        <label for="9">False</label><br>
 
-    <input type="submit" name="submit" id="submit" value="submit-quiz" onclick="
-        result()">
+        <input type="submit" name="submit" id="submit1" value="submit-quiz">
+    </form>
     <script>
         function result()
         {
@@ -72,17 +76,16 @@
             {
                 score++;
             }
-            
-            document.addEventListener('DOMContentLoaded', ()=>
-            {
-                document.getElementById('submit').addEventListener('click', result)
-            })
             return score;
-
+            console.log(score)
         }
     </script>
+    <button onclick="getElementById('demo').innerHTML=result()">Grade</button>   
+    <p id="demo"></p>    
     <footer>
+        
         Theodore Horvath
     </footer>
+    
 </body>
 </html>
